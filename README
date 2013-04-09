@@ -1,4 +1,17 @@
-kantaro
-=======
-
 Esperanta Kantaro
+
+This is a songbook (chords and lyrics) for a number of popular songs in the Esperanto language. It is written using LaTeX and the "Songs" package.
+
+The songs themselves are stored in the 'kantoj' directory; one file for each song. The order in which these songs are included in the songbook is specified in kantoj.sbd, and there are currently two top-level TeX files: kantaro.tex and ukulelo.tex. These include the same songs, but for ukulelo.tex the macro '\ukelele' is defined; this allows you to provide different behaviours for different instruments - usually different keys. This can be extended to other instruments in the future, but 'kantaro.tex' should always have the songs in the original keys.
+
+Files produced by LaTeX are stored in 'tex_out'; the resulting PDF files are placed in 'pdf'.
+
+To build the songbook, you first need an installation of LaTeX and pdfLaTeX. You also need the Songs package (http://songs.sourceforge.net/) and support for Esperanto unicode special characters (https://github.com/tepreece/latex-eo-unicode).
+
+First build Songs; if you are on an Ubuntu system you will need to install the package 'texlive-fonts-recommended' in addition to the standard TeX packages to make this work. You can then either install it, or just copy songs.sty to this directory.
+
+The Esperanto unicode special characters support can be installed in the usual manner, or just dropped into this directory.
+
+The .gitignore file is set to ignore songs.sty and eo-unicode.sty, so you won't pollute the repository by dropping them in this directory. It also ignores all of the output files.
+
+Once you have got everything installed, you can just type "make" to build the PDFs.
