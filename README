@@ -1,12 +1,14 @@
 Esperanta Kantaro
 
-This is a songbook (chords and lyrics) for a number of popular songs in the Esperanto language. It is written using LaTeX and the "Songs" package.
+This is a songbook (chords and lyrics) for a number of popular songs in the Esperanto language. It is written using LaTeX and the "Songs" package. There's also some sheet music that uses Lilypond.
 
 The songs themselves are stored in the 'kantoj' directory; one file for each song. The order in which these songs are included in the songbook is specified in kantoj.sbd, and there are currently two top-level TeX files: kantaro.tex and ukulelo.tex. These include the same songs, but for ukulelo.tex the macro '\ukelele' is defined; this allows you to provide different behaviours for different instruments - usually different keys. This can be extended to other instruments in the future, but 'kantaro.tex' should always have the songs in the original keys.
 
 Files produced by LaTeX are stored in 'tex_out'; the resulting PDF files are placed in 'pdf'.
 
-To build the songbook, you first need an installation of LaTeX and pdfLaTeX. You also need the Songs package (http://songs.sourceforge.net/) and support for Esperanto unicode special characters (https://github.com/tepreece/latex-eo-unicode).
+Sheet music is written in Lilypond; it isn't part of the main songbook file, and currently makes one PDF for each song for which sheet music is provided. The source files for these are in the 'lilypond' directory, and the PDFs go to 'pdf'.
+
+To build the songbook, you first need an installation of LaTeX, pdfLaTeX and Lilypond. You also need the Songs package (http://songs.sourceforge.net/) and support for Esperanto unicode special characters (https://github.com/tepreece/latex-eo-unicode).
 
 First build Songs; if you are on an Ubuntu system you will need to install the package 'texlive-fonts-recommended' in addition to the standard TeX packages to make this work. You can then either install it, or just copy songs.sty to this directory.
 
